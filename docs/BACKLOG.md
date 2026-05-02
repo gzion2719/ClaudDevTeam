@@ -1,0 +1,39 @@
+# BACKLOG.md
+
+Scope-creep capture and deferred items. Reviewed every 5 sessions (CHATLOG entry count divisible by 5).
+
+---
+
+## Bootstrap Prompt Improvements (Developer.md)
+
+- [ ] Add write-time reminder to Stage 3: before closing any generated file, confirm language convention is stated identically to CLAUDE.md. Currently only caught by Stage 4 self-verify — should be a generation-time habit.
+
+---
+
+## Handoff Contract & ADRs
+
+- [ ] Define versioning scheme for handoff file format (e.g., `schema_version: "1.0"` field) so future role additions can detect incompatible formats
+- [ ] Consider: should handoff files be JSON/YAML for machine-readability, or stay `.md` for human-readability? (Currently assumed `.md` — revisit if automation is added)
+
+---
+
+## Role Prompts
+
+- [ ] PM / Product Manager role (above Architect) — deferred from bootstrap
+- [ ] DevOps / Infra role (after QA) — deferred from bootstrap
+- [ ] "Improve the existing Developer.md" — the original prompt in the project root; lessons from building the new role prompts should feed back into it
+
+---
+
+## Tooling & Automation
+
+- [ ] Consider a simple shell script (`scripts/new-project.sh`) that creates the `docs/handoff/` directory and blank handoff file stubs for a new project using the ClaudeDevTeam system
+- [ ] Consider `cspell` addition to CI once role prompts are stable (currently minimal CI = markdownlint only)
+
+---
+
+## Open Questions
+
+- What is the right granularity for the QA report? (Bug list? Test coverage assessment? Both?)
+- Should the Architect prompt support multiple architecture styles (e.g., monolith vs. microservices) or be style-agnostic?
+- How should the Developer prompt handle cases where the architecture brief is ambiguous or incomplete — ask for clarification or proceed with documented assumptions?
