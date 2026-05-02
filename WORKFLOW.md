@@ -45,15 +45,17 @@ Any of these triggers the closing ritual:
 
 ## CI Gate (local mirror of CI)
 
-Before every push, run:
-
+**One-time setup** (run once after cloning):
 ```bash
-markdownlint "**/*.md"
+npm install -g markdownlint-cli
+```
+
+Before every push, run:
+```bash
+markdownlint "**/*.md" --ignore node_modules
 ```
 
 This mirrors what `.github/workflows/ci.yml` runs on push. Running it locally catches red CI in seconds rather than waiting for the pipeline.
-
-Install: `npm install -g markdownlint-cli`
 
 ---
 
