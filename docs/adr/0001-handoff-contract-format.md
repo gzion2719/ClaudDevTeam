@@ -31,7 +31,7 @@ All handoff files live in `docs/handoff/` relative to the project root being wor
 
 ### Schema version
 
-Every handoff file begins with a metadata block:
+Every handoff file begins with a metadata block followed by an H1 title line:
 
 ```markdown
 ---
@@ -40,7 +40,11 @@ role: <Architect | Developer | QA>
 date: YYYY-MM-DD
 project: <project name>
 ---
+
+# <ARCH_BRIEF | DEV_SUMMARY | QA_REPORT> — <project name>
 ```
+
+The H1 must be the first non-frontmatter line. Body sections start at `##`.
 
 ### ARCH_BRIEF.md — required fields
 

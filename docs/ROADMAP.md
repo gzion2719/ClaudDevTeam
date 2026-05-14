@@ -9,9 +9,9 @@
 **Goal:** Define and document the shared file format that all three role prompts will use to pass context between sessions. This is the prerequisite for everything else.
 
 **Tasks:**
-- [ ] Complete ADR-0001: handoff contract format (file names, required fields, optional fields, version field)
-- [ ] Create `docs/handoff/` directory with sample skeleton files for each role output
-- [ ] Review ADR-0001 against all 5 non-negotiables — confirm no gaps
+- [ ] Complete ADR-0001: handoff contract format (file names, required fields, optional fields, version field) — *Draft; H1 title rule added 2026-05-14; promotes to Active after Milestone 3 test loop*
+- [x] Create `docs/handoff/` directory with sample skeleton files for each role output — *2026-05-14*
+- [x] Review ADR-0001 against all 5 non-negotiables — confirm no gaps — *2026-05-14; gaps G1–G3 logged in BACKLOG*
 
 **Acceptance check:** ADR-0001 is complete, sample handoff files exist, and a human reading only the ADR + samples could write a compliant handoff file without asking a question.
 
