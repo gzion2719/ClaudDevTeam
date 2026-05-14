@@ -34,6 +34,7 @@ Every chat must leave the project measurably better on two axes: (1) the quality
 - Ask when uncertain via `AskUserQuestion`. Do not guess at scope.
 - Capture scope creep into `docs/BACKLOG.md`, not into the current session.
 - Ground answers in repo docs, not generic advice.
+- **Always follow `WORKFLOW.md`'s Git Flow.** Re-read the Git Flow section before any `git push` or `gh pr create` — do not rely on a cached version. Never commit directly to `main` or `dev`. PRs targeting `main` are promotion-only; feature PRs always target `dev`.
 
 ---
 

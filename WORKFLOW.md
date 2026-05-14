@@ -45,18 +45,37 @@ Any of these triggers the closing ritual:
 
 ## Git Flow
 
-Every change goes on a feature branch — never commit directly to `main`.
+Two long-lived branches: `main` (production / deploy target) and `dev` (integration). Every change goes on a short-lived branch off `dev` and is merged back through TWO pull requests.
+
+```
+feature/<topic>  ──PR #1──▶  dev  ──PR #2──▶  main  ──▶  deploy
+```
+
+**Step 1 — Open a feature branch off `dev`:**
 
 ```bash
-git checkout -b feature/<short-topic>
+git fetch origin
+git checkout -b feature/<short-topic> origin/dev
 # ... make changes ...
 git add <files>
 git commit -m "<type>: <description>"
 git push -u origin feature/<short-topic>
-# then open a PR on GitHub and merge to main
+gh pr create --base dev   # PR #1: feature → dev
 ```
 
-Branch naming: `feature/`, `fix/`, `docs/`, `chore/` prefixes.
+**Step 2 — After PR #1 merges, promote `dev` → `main`:**
+
+```bash
+gh pr create --base main --head dev --title "promote: <what's in this batch>"
+```
+
+PR #2 (`dev` → main) is opened whenever a coherent batch of feature PRs is ready to ship. It is NOT opened per feature — multiple feature PRs can land in `dev` first, then a single promotion PR brings them to `main`.
+
+**Step 3 — `main` triggers deploy.**
+
+Deploy target is TBD (see `docs/BACKLOG.md` under "Tooling & Automation"). When hosting is added, a deploy workflow runs on push to `main`. Until then, `main` is the release-ready snapshot.
+
+**Branch naming:** `feature/`, `fix/`, `docs/`, `chore/` prefixes. Never commit directly to `main` or `dev`.
 
 ---
 
