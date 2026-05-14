@@ -6,6 +6,18 @@ Each entry: max 5 content bullets + `**Process improvement:**` + `**Next session
 
 ---
 
+## 2026-05-14 — Milestone 1 shipped + git flow codified + Architect prompt drafted
+
+- Completed Milestone 1: created docs/handoff skeletons (ARCH_BRIEF, DEV_SUMMARY, QA_REPORT) per ADR-0001; added H1 title rule to ADR-0001 after markdownlint caught the gap.
+- Fixed git flow: PR #1 was mistakenly opened against main; created dev branch, retargeted, and codified feature→dev→main→deploy in WORKFLOW.md, CLAUDE.md, and SESSION_PROTOCOL.md.
+- Two feedback rules saved to memory: re-read WORKFLOW.md Git Flow before any push/PR; present open PRs as a numbered merge-order list.
+- Drafted roles/Architect.md (Milestone 2): cold-start interview + handoff-intake revision mode, ADR-0001 schema inline, portability fallback. PR #4 open against dev.
+- Session ended on discovering we should be in a different project (Priority knowledge base) — Architect work was correct for this repo but not today's goal.
+- **Process improvement:** SESSION_PROTOCOL.md Step 5 now leads with project name + folder path so user can confirm right project before choosing focus.
+- **Next session:** Navigate to the Priority knowledge base project folder and establish what needs to be done there.
+
+---
+
 ## 2026-05-02 — Post-bootstrap: CI green + git flow defined
 
 - Got CI green: added `.markdownlint.json` disabling style-only rules (MD013, MD022, MD029, MD031, MD032, MD034, MD040, MD048, MD060).

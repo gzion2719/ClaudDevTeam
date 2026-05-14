@@ -21,7 +21,7 @@ Read `WORKFLOW.md` if not already in context.
 Read ONLY `CHATLOG.md` last 3 entries + `docs/ROADMAP.md` upfront. Defer `docs/AGENTS.md`, `docs/adr/`, and role files to Step 4b after focus is chosen. Load just-in-time, not just-in-case.
 
 ### Step 5 — Working-state summary
-Summarize which files changed since the last session (git status if available, or file-mod-time scan). Flag any drift from the last CHATLOG entry's "Next session:" line.
+**Lead with the project name and working folder path** so the user can confirm we're in the right project before choosing a focus. Then summarize which files changed since the last session (git status if available, or file-mod-time scan). Flag any drift from the last CHATLOG entry's "Next session:" line.
 
 ### Step 6 — Ask for current focus
 Ask via `AskUserQuestion` with 2-3 grounded options derived from the ROADMAP and last CHATLOG entry.

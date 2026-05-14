@@ -22,7 +22,7 @@
 **Goal:** Write `roles/Architect.md`, `roles/Developer.md`, and `roles/QA.md` — each a self-contained bootstrap prompt in the style of `Developer.md`, adapted for its role.
 
 **Tasks:**
-- [ ] Write `roles/Architect.md` (system design, produces `ARCH_BRIEF.md`)
+- [x] Write `roles/Architect.md` (system design, produces `ARCH_BRIEF.md`) — *2026-05-14; draft, validated by Milestone 3 test loop*
 - [ ] Write `roles/Developer.md` (implementation, reads `ARCH_BRIEF.md`, produces `DEV_SUMMARY.md`)
 - [ ] Write `roles/QA.md` (quality validation, reads `DEV_SUMMARY.md`, produces `QA_REPORT.md`)
 - [ ] Each prompt: cold-start mode + handoff-intake mode both documented
