@@ -94,15 +94,18 @@ Summarize which docs/files changed, what's saved, what's in the `roles/` folder 
 
 The handoff message LEADS with the gate-first block — before any prose, before any file list.
 
+**Before drafting this block, Read `WORKFLOW.md`'s Git Flow section.** Do not rely on remembered flow. Confirm the current branch model and PR base. As of 2026-05-14 the flow is `feature → PR (base: dev) → dev → PR (base: main) → main → deploy`. Feature PRs target `dev`, not `main`.
+
 ```bash
 cd "C:\Users\galzi\OneDrive - Afiki-C\Development\Claude\ClaudeDevTeam"
 markdownlint "**/*.md"           # CI mirror — catch lint before push
 git add <files>
 git commit -m "<suggested commit message>"
-git push
+git push -u origin <branch>
+gh pr create --base <dev|main>   # base per WORKFLOW.md, NOT defaulted
 ```
 
-**Mechanical pre-send self-check.** Re-read your draft's first 3 lines before sending. If they don't contain the gate command, prepend it. The gate goes first because that's what the user runs first.
+**Mechanical pre-send self-check.** Re-read your draft's first 3 lines before sending. If they don't contain the gate command, prepend it. The gate goes first because that's what the user runs first. Also verify the `--base` flag is present and matches WORKFLOW.md — never let `gh pr create` default the base.
 
 ### Step 6 — Close warmly
 
