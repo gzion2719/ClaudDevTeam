@@ -43,6 +43,23 @@ Any of these triggers the closing ritual:
 
 ---
 
+## Git Flow
+
+Every change goes on a feature branch — never commit directly to `main`.
+
+```bash
+git checkout -b feature/<short-topic>
+# ... make changes ...
+git add <files>
+git commit -m "<type>: <description>"
+git push -u origin feature/<short-topic>
+# then open a PR on GitHub and merge to main
+```
+
+Branch naming: `feature/`, `fix/`, `docs/`, `chore/` prefixes.
+
+---
+
 ## CI Gate (local mirror of CI)
 
 **One-time setup** (run once after cloning):

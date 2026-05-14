@@ -4,6 +4,14 @@ Scope-creep capture and deferred items. Reviewed every 5 sessions (CHATLOG entry
 
 ---
 
+## Git Workflow
+
+- [ ] Add branch protection to `main` on GitHub (Settings → Branches → require PR before merge)
+- [ ] Define git flow in WORKFLOW.md: `feature/<topic>` branches → PR → merge to main
+- [ ] Add git flow question to bootstrap interview Stage 1 Round 3 (currently missing from Developer.md)
+
+---
+
 ## Bootstrap Prompt Improvements (Developer.md)
 
 - [ ] Add write-time reminder to Stage 3: before closing any generated file, confirm language convention is stated identically to CLAUDE.md. Currently only caught by Stage 4 self-verify — should be a generation-time habit.
