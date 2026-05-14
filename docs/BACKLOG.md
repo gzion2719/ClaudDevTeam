@@ -6,9 +6,10 @@ Scope-creep capture and deferred items. Reviewed every 5 sessions (CHATLOG entry
 
 ## Git Workflow
 
-- [ ] Add branch protection to `main` on GitHub (Settings → Branches → require PR before merge)
-- [ ] Define git flow in WORKFLOW.md: `feature/<topic>` branches → PR → merge to main
-- [ ] Add git flow question to bootstrap interview Stage 1 Round 3 (currently missing from Developer.md)
+- [ ] Add branch protection to BOTH `main` and `dev` on GitHub (Settings → Branches → require PR before merge, no direct pushes)
+- [x] Define git flow in WORKFLOW.md — *2026-05-14; feature → dev → main → deploy, two-PR model*
+- [ ] Add git flow question to bootstrap interview Stage 1 Round 3 (currently missing from Developer.md) — must capture the dev/main split AND deploy target
+- [ ] **Deploy target TBD:** wire up a deploy workflow on push to `main` once hosting is chosen (Pages? Vercel? Cloudflare? other?). Until then `main` is just a release-ready snapshot.
 
 ---
 
